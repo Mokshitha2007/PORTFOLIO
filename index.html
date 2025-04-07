@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKSHITHA YARLAGADDA - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #111;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+        }
+        
+        nav a:hover {
+            color: green;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin:  auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #136a40;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            color: #ccc;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin: 1rem 0;
+            color: #aaa;
+        }
+        
+        p, li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Home Section - New Layout */
+        #home {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 8rem;
+        }
+        
+        .home-content {
+            flex: 1;
+            padding-right: 3rem;
+            max-width: 60%;
+        }
+        
+        .home-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 40%;
+        }
+        
+        #home img {
+            border-radius: 50%;
+            width: 420px;
+            height: 420px;
+            border: 10px solid rgb(226, 218, 218);
+            
+        }
+        
+
+        
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-align: left;
+        }
+        
+        #home h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        #home p {
+            font-size: 1.2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        /* About Section */
+        .info-label {
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+            color: #136a40;
+        }
+        
+        /* Education Section */
+        .education-item {
+            margin-bottom: 2rem;
+            background-color: #111;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        
+        .education-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-top: 1rem;
+            max-height: 200px;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill {
+            background-color: #136a40;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Section */
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .contact-card {
+            background-color: #111;
+            padding: 1.5rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #136a40;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            
+        }
+        
+        .social-icons a:hover {
+            color: #136a40;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .home-content, .home-image {
+                max-width: 100%;
+                padding-right: 0;
+            }
+            
+            #home h1, #home h2, #home p {
+                text-align: center;
+            }
+            
+            #home img {
+                margin-top: 2rem;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 0.5rem;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            #home {
+                padding-top: 6rem;
+            }
+            
+            #home h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem;
+            }
+            
+            nav a {
+                margin: 0.3rem 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            #home h1 {
+                font-size: 1.8rem;
+            }
+            
+            #home img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="https://drive.google.com/file/d/1Mr2AtCxA8COPPYaEzTx_fBWHLj5C_pTz/view" target="_blank">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section - Updated Layout -->
+    <section id="home">
+        <div class="home-content">
+            <h1>MOKSHITHA YARLAGADDA</h1>
+            <h2>Computing Student</h2>
+            <p>Passionate about software development and artificial intelligence. Focused on building innovative solutions and applying algorithms to solve real-world problems.</p>
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mokshitha-yarlagadda-aa549230a/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/mokshitha._.00?igsh=NG5jNHFteXNma3kx" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Mokshitha2007" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:mokshithayarlagadda@gmail.com" title="Gmail" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://x.com/mokshitha_00" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+            </div>
+        </div>
+        
+        <div class="home-image">
+            <img src="https://drive.google.com/thumbnail?id=1zCcPcjf1JCMlrCyPxfldR2HC-UqSex0u" alt="Mokshitha Yarlagadda">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Focused and enthusiastic developer with a keen interest in software development and artificial intelligence. By comprehensive exposure to the underlying concepts and applying them vividly to various projects, my love for these domains came into being. I am a passionate individual who thrives to build and apply algorithms to solve real-world industry problems.</p>
+        
+        <h2>Personal Information</h2>
+        <ul>
+            <li><span class="info-label">Birthday:</span> 4 February 2007</li>
+            <li><span class="info-label">City:</span> Vijayawada, Andhra Pradesh, 520007</li>
+            <li><span class="info-label">Phone:</span> +91 63091666798</li>
+            <li><span class="info-label">Email:</span> mokshithayarlagadda@gmail.com</li>
+        </ul>
+        
+        <h2>Interests</h2>
+        <ul>
+            <li>Software Development</li>
+            <li>Machine Learning</li>
+            <li>Computer Vision</li>
+            <li>Web Development</li>
+            <li>Blockchain</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h1>Education</h1>
+        
+        <div class="education-item">
+            <h3>Primary Studies</h3>
+            <h2>KCP Siddhartha</h2>
+            <p>Completed my primary education with excellent academic performance.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiNflnFbmU9yHGdeZDvTXRQB1f5osXkHkm0w&s" alt="KCP Siddhartha">
+        </div>
+        
+        <div class="education-item">
+            <h3>Intermediate in MPC Course</h3>
+            <h2>Sri Bhavishya</h2>
+            <p>Completed intermediate education with Mathematics, Physics, and Chemistry.</p>
+            <img src="https://content.jdmagicbox.com/comp/vijayawada/a9/0866px866.x866.221229160937.t4a9/catalogue/sri-bhavishya-junior-college-auto-nagar-vijayawada-colleges-ldiz62pgq4.jpg" alt="Sri Bhavishya" width="250">
+        </div>
+        
+        <div class="education-item">
+            <h3>BTech CSE Course</h3>
+            <h2>Amrita Vishwa Vidhyapeetham</h2>
+            <p>Currently pursuing Bachelor of Technology in Computer Science and Engineering.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiOf4KWqXaxvWLJqW0wim3MD1yNm_WXdCGjA&s" alt="Amrita Vishwa Vidhyapeetham">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <div class="skills-container">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">Java</span>
+            <span class="skill">Solidity</span>
+            <span class="skill">Blockchain</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Teamwork</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-methods">
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>Kanuru, Vijayawada</p>
+                <p>Andhra Pradesh - 520007</p>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>mokshithayarlagadda@gmail.com</p>
+                <p>mokshimanvi@gmail.com</p>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+91 6309166678</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mokshitha-yarlagadda-aa549230a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Mokshitha2007" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/mokshitha._.00?igsh=NG5jNHFteXNma3kx" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:mokshithayarlagadda@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>© 2023 Mokshitha Yarlagadda. All rights reserved.</p>
+    </footer>
+</body>
+</html>
